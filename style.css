@@ -1,0 +1,214 @@
+/* ===== Сброс и основа ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;  /* фон задаём явно: иначе браузер с тёмной темой может подставить свой */
+  font-family: Roboto, Arial, sans-serif;
+  color: #1f2937;
+}
+
+h1,
+h2,
+p,
+blockquote {
+  margin: 0;               /* убираем отступы браузера по умолчанию, ставим свои там, где нужно */
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Общая обёртка: содержимое не шире 1024px и стоит по центру страницы */
+.container {
+  max-width: 1056px;       /* 1024px содержимого + по 16px отступа слева и справа */
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ===== Шапка ===== */
+.site-header {
+  padding: 16px 0;
+  background-color: #1f2937;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;  /* логотип слева, меню справа */
+  align-items: center;
+}
+
+.logo {
+  color: #f9faf8;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-list {
+  display: flex;           /* пункты меню в строку */
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;        /* без точек у списка */
+}
+
+.nav-list a {
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
+/* ===== Hero: главный экран ===== */
+.hero {
+  padding: 100px 0 130px;
+  background-color: #1f2937;
+}
+
+.hero-inner {
+  display: flex;           /* текст слева, картинка справа */
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-text,
+.hero-image {
+  flex: 1;                 /* обе колонки делят ширину поровну */
+}
+
+.hero-title {
+  color: #f9faf8;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  margin: 8px 0 16px;
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
+.hero-image {
+  display: flex;           /* текст-заглушка по центру серого блока */
+  justify-content: center;
+  align-items: center;
+  min-height: 240px;
+  background-color: #6b7280;
+  color: #f9faf8;
+  font-size: 18px;
+}
+
+/* ===== Кнопки ===== */
+.button {
+  display: inline-block;   /* ссылка-кнопка: в строке, но со всеми отступами */
+  padding: 8px 36px;
+  border: 2px solid #3882f6;
+  border-radius: 8px;
+  background-color: #3882f6;
+  color: #f9faf8;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.button-outline {
+  border-color: #f9faf8;   /* та же кнопка, но с белой рамкой — для синего блока */
+}
+
+/* ===== Информация ===== */
+.info {
+  padding: 56px 0 120px;
+}
+
+.info-title {
+  margin-bottom: 48px;
+  color: #1f2937;
+  font-size: 36px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.cards {
+  display: flex;           /* четыре карточки в ряд */
+  flex-wrap: wrap;         /* на узком экране переносятся на новую строку */
+  justify-content: center;
+  gap: 50px;
+}
+
+.card {
+  width: 166px;
+  text-align: center;
+}
+
+.card-image {
+  height: 166px;
+  margin-bottom: 8px;
+  border: 4px solid #3882f6;
+  border-radius: 16px;
+}
+
+.card-text {
+  color: #4b5563;
+  font-size: 18px;
+}
+
+/* ===== Цитата ===== */
+.quote {
+  padding: 120px 0;
+  background-color: #e5e7eb;
+}
+
+.quote-inner {
+  max-width: 822px;        /* цитата уже остальных блоков, как в макете */
+}
+
+.quote-text {
+  color: #1f2937;
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.quote-author {
+  margin-top: 16px;
+  color: #1f2937;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ===== Призыв к действию ===== */
+.cta {
+  padding: 100px 0;
+}
+
+.cta-box {
+  display: flex;           /* текст слева, кнопка справа */
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 120px;
+  border-radius: 8px;
+  background-color: #3882f6;
+  color: #f9faf8;
+}
+
+.cta-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cta-subtitle {
+  font-size: 18px;
+}
+
+/* ===== Подвал ===== */
+.site-footer {
+  padding: 36px 0;
+  background-color: #1f2937;
+  color: #f9faf8;
+  font-size: 18px;
+  text-align: center;
+}
